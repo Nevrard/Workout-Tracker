@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const router = express.Router();
 
+//Create a workout
 router.post("/api/workouts", ({ body }, res) => {
   Workout.create(body)
     .then((dbWorkout) => {
@@ -13,6 +14,7 @@ router.post("/api/workouts", ({ body }, res) => {
     });
 });
 
+// Add an exercise to a workout
 router.put("/api/workouts/:id", ({ params, body }, res) => {
   console.log("PARAMS", body, params);
 
@@ -28,7 +30,7 @@ router.put("/api/workouts/:id", ({ params, body }, res) => {
       res.json(err);
     });
 });
-
+//workouts to be displayed on the stat graph
 router.get("/api/workouts/range", (req, res) => {
   Workout.find({})
     .limit(7)
@@ -40,6 +42,7 @@ router.get("/api/workouts/range", (req, res) => {
     });
 });
 
+//All workouts
 router.get("/api/workouts", (req, res) => {
   Workout.find({})
     .then((dbWorkout) => {
