@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 
 router.post("/api/workouts", ({ body }, res) => {
-  Workout.create({})
+  Workout.create(body)
     .then((dbWorkout) => {
       res.json(dbWorkout);
     })
