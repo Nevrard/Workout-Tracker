@@ -65,7 +65,7 @@ Adding a new Exercise
 
 ## Deployment
 
-Users can view the deployed project [here](https://workout-trackersoft.herokuapp.com/stats). If you intend to iterate on the project, besides downloading the repo to your machine, be sure to run npm i in the root directory and to also have MongoDB installed and ready.
+Users can view the deployed project [here](https://workout-trackersoft.herokuapp.com/). If you intend to iterate on the project, besides downloading the repo to your machine, be sure to run npm i in the root directory and to also have MongoDB installed and ready.
 To run the apllication ,type "node server.js" in your terminal
 then select an action from the prompted Menu
 
